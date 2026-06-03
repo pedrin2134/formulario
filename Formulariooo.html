@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+
+    <style>
+      
+       fieldset {
+  max-width: 500px; /* Define o tamanho máximo da linha do quadrado */
+  width: 100%;
+  margin-bottom: 20px; /* Cria um espaço entre um bloco e outro */
+}
+
+#iexpectativa {
+  width: 100%;          /* Ocupa toda a largura interna do quadrado */
+  max-width: 100%;      /* Impede que o usuário estique a caixa para fora do formulário */
+  padding: 10px;        /* Dá um espaço confortável para o texto não grudar na borda */
+  border: 1px solid #ccc;
+  border-radius: 6px;   /* Arredonda os cantos da caixa */
+  box-sizing: border-box; /* Garante que o padding não quebre o tamanho total */
+  resize: vertical;     /* Permite que o usuário aumente a caixa apenas para baixo, nunca para os lados */
+  font-family: Arial, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+
+    <form action="POST">
+        <fieldset>
+        <LEgend>Dados pessoais</LEgend><br>
+            <label for="iname">Nome</label>
+            <input type="text" name="Nome" id="inome">
+<br><br>
+            <label for="iemail">Email</label>
+            <input type="email" name="Email" id="iemail">
+<br><br>
+            <label for="itelefone">Telefone</label>
+            <input type="tel" name="Telefone" id="itelefone">
+<br><br>
+            <label for="isenha">Crie uma senha</label>
+            <input type="password" name="senha" id="isenha">
+<br><br>
+            <label for="iidade">Idade</label>
+            <input type="number" name="idade" id="iidade" style="width: 50px;">
+<br><br>
+            <label for="iestado">Estado de entrega:</label><br>
+            <select name="estado" id="iestado">
+                    <option value="" disabled selected>--Selecione seu estado--</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+<br><br>
+                <label for="icnh">Envie uma foto da sua CNH:</label><br>
+                <input type="file" name="cnh" id="icnh" accept="image/*,application/pdf">
+</fieldset><br>
+
+<fieldset>
+        <legend>Escolha do carro</legend>
+
+       <p>Escolha o modelo:
+<br>
+    <label for="han">BYD Han</label>
+    <input type="radio" name="modelo" id="han" value="byd-han">
+<br>
+    <label for="seal">BYD Seal</label>
+    <input type="radio" name="modelo" id="seal" value="byd-seal">
+<br>
+    <label for="Song">BYD Song Plus</label>
+    <input type="radio" name="modelo" id="Song" value="byd-Song">
+</p>
+
+<p>Itens Adicionais:
+<br>
+    <label for="isom">Som Premium</label>
+    <input type="checkbox" name="Som" id="isom">
+<br>
+    <label for="iar">Ar-condicionado digital</label>
+    <input type="checkbox" name="Ar" id="iar">
+<br>
+    <label for="icamera">Camera 360</label>
+    <input type="checkbox" name="Camera" id="icamera"></p>
+
+    <label for="icor">Escolha a cor do carro:</label><br>
+    <input type="color" name="cor" id="icor" value="#ffffff">
+<br><br>
+    <label for="ibrilho">Intensidade do brilho:</label><br>
+    <input type="range" name="brilho" id="ibrilho" min="0" max="100" value="50">
+</fieldset>
+
+<fieldset>
+    <legend>Entrega</legend>
+    <label for="idate">Data de entrega</label><br>
+    <input type="date" name="Data" id="idate">
+<br><br>
+    <label for="ihora">Hora preferida para entrega:</label><br>
+    <input type="time" name="hora_entrega" id="ihora">
+<br><br>
+    <label for="imes">Mês da compra:</label><br>
+    <input type="month" name="mes_compra" id="imes">
+</fieldset>
+
+<fieldset>
+    <legend>Sua opinião</legend>
+    <label for="iexpectativa">Conte quais são as expectativas sobre o carro:</label><br>
+    <textarea name="expectativa" id="iexpectativa" rows="5" placeholder="Ex: Que o carro tenha uma boa potência e impressione os vizinhos..."></textarea>
+</fieldset>
+
+<fieldset>
+    <legend>Avaliação dos modelos BYD</legend>
+    <label for="ibydgs">Avalie o BYD GS (0 a 5):</label>
+<input type="number" name="aval_bydgs" id="ibydgs" min="0" max="5" step="1" placeholder="0">
+
+<br><br>
+
+<label for="idolphin">Avalie o BYD Dolphin Plus (0 a 5):</label>
+<input type="number" name="aval_dolphin" id="idolphin" min="0" max="5" step="1" placeholder="0">
+
+<br><br>
+
+<label for="mini">Avalie o BYD mini (0 a 5):</label>
+<input type="number" name="aval_mini" id="mini" min="0" max="5" step="1" placeholder="0">
+</fieldset>
+
+<button type="submit">Arrocha</button>
+<button type="reset">Passar o rodo</button>
+
+    </form>
+</body>
+</html>
